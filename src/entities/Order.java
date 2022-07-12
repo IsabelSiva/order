@@ -45,4 +45,22 @@ public class Order {
     public void removeItem(OrderItem item){
         items.remove(item);
     }
+
+    public double total(){
+        double sum = 0;
+        for (OrderItem item : items){
+            sum += item.subTotal();
+        }
+        return sum;
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "moment=" + moment +
+                ", status=" + status +
+                ", client=" + client +
+                ", items=" + items +
+                '}';
+    }
 }

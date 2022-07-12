@@ -2,13 +2,13 @@ package entities;
 
 public class OrderItem {
     private int quantity;
-    private double price;
+    private Product product;
 
     public OrderItem(){}
 
-    public OrderItem(int quantity, double price){
+    public OrderItem(int quantity,Product product){
         this.quantity = quantity;
-        this.price = price;
+        this.product = product;
     }
 
     public int getQuantity() {
@@ -19,15 +19,15 @@ public class OrderItem {
         this.quantity = quantity;
     }
 
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
     public double subTotal(){
-        return quantity * price;
+        return quantity * product.getPrice();
+    }
+
+    @Override
+    public String toString() {
+        return "OrderItem{" +
+                "quantity=" + quantity +
+                ", product=" + product +
+                '}';
     }
 }
