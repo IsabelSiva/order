@@ -29,9 +29,9 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                '}';
+        StringBuilder product = new StringBuilder();
+        product.append(name);
+        product.append(price);
+        return product.toString();
     }
 }
