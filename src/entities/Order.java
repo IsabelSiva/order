@@ -56,11 +56,18 @@ public class Order {
 
     @Override
     public String toString() {
-        return "Order{" +
-                "moment=" + moment +
-                ", status=" + status +
-                ", client=" + client +
-                ", items=" + items +
-                '}';
+        double sum = 0;
+        StringBuilder order = new StringBuilder();
+        order.append("order moment: " + moment + "\n");
+        order.append("order status: " + status+ "\n");
+        order.append("client data: " + client+ "\n");
+        order.append("order intems: " + items+ "\n");
+        for (OrderItem item : items){
+            order.append(item);
+            sum += sum + item.subTotal();
+        }
+        order.append("total value: " + sum);
+
+        return order.toString();
     }
 }

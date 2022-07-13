@@ -50,6 +50,7 @@ public class Application {
             order1.addItem(orderItem);
 
         }
+        System.out.println("  ORDER SUMARY  ");
         System.out.print(order1);
     }
 }

@@ -41,10 +41,10 @@ public class Client {
 
     @Override
     public String toString() {
-        return "Client{" +
-                "name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", birthDate=" + birthDate +
-                '}';
+        StringBuilder client = new StringBuilder();
+        client.append(name);
+        client.append(email);
+        client.append(birthDate);
+        return client.toString();
     }
 }
