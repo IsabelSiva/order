@@ -61,12 +61,11 @@ public class Order {
         order.append("order moment: " + moment + "\n");
         order.append("order status: " + status+ "\n");
         order.append("client data: " + client+ "\n");
-        order.append("order intems: " + items+ "\n");
+        order.append("order intems: " + "\n");
         for (OrderItem item : items){
-            order.append(item);
-            sum += sum + item.subTotal();
+            order.append(item + "\n");
         }
-        order.append("total value: " + sum);
+        order.append(String.format("%.2f", total()));
 
         return order.toString();
     }

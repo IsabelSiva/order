@@ -26,8 +26,8 @@ public class OrderItem {
     @Override
     public String toString() {
         StringBuilder orderItem = new StringBuilder();
-        orderItem.append(quantity);
-        orderItem.append(product);
+        orderItem.append(quantity + " ,");
+        orderItem.append(product );
         return orderItem.toString();
     }
 }
