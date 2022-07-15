@@ -30,8 +30,8 @@ public class Product {
     @Override
     public String toString() {
         StringBuilder product = new StringBuilder();
-        product.append(name);
-        product.append(price);
+        product.append(name + " ,");
+        product.append(price + " ");
         return product.toString();
     }
 }
